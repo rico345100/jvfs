@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Virtual File System for Modern Web Browsers</h1>
+
+    <script src="vfs.js"></script>
+    <script>
+        //Create Simple FileSystem
+        var fileSystem = new FileSystem({ key: 'fs1' });
+        var filesInRoot = fileSystem.scan(1);
+        for (var i = 0; i < filesInRoot.length; i++) {
+            console.log(fileSystem.getFileById(filesInRoot[i]).serialize());
+        }
+    </script>
+</body>
+</html>
